@@ -1,0 +1,43 @@
+
+.mainContainer{
+    width: 100%;
+    height: 100vh;
+    background: #f6f6fb;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.navContainer{
+
+    grid-column: 1/2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.childrenContainer{
+    grid-column: 2/7;
+    display: grid;
+    grid-template-rows: 2fr 6fr 1fr;
+}
+
+.userbar{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* background: rebeccapurple; */
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/3;
+}
+
+.userMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

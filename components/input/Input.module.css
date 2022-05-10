@@ -1,0 +1,20 @@
+.InputLabel {
+    /* background: darkgreen; */
+    font-size: small;
+    width: 100%;
+    padding: .6em;
+    border-radius: 3px;
+    margin-bottom: 4%;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.InputLabel input{
+    width: 100%;
+    border : none;
+    outline: none;
+    padding-top: 5px;
+}
+
+.InputLabel label{
+    color: grey;
+}

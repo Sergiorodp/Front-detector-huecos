@@ -1,0 +1,21 @@
+
+.buttonContainer{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ButtonLabel{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.redirect{
+    color: grey;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+

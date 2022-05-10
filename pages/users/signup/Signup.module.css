@@ -1,0 +1,28 @@
+
+.buttonContainer{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inline{
+    display: flex;
+}
+
+.inline div:first-child{
+    margin-right: 1em;
+}
+
+.ButtonLabel{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.redirect{
+    color: grey;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}

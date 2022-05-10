@@ -1,7 +1,7 @@
 import DashLayout from 'Layout/AppLayout/appLayout'
 
 //styles
-import styles from 'styles/Home.module.css'
+import styles from './dashstyle.module.css'
 
 
 export default function Dash(){
