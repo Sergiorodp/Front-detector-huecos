@@ -53,6 +53,7 @@ export default function Singup() {
     }
 
     const handleRegister = e =>{
+
         e.preventDefault()
         setMessage('Loading...')
         UserService.RegisterService({
@@ -69,11 +70,11 @@ export default function Singup() {
             setEmail('') 
             router.push('/users/login')
 
-        }).catch( e => {
+        }).catch( () => {
             setMessage('Registrar')
             console.log("No se pudo registrar")
         })
-        console.log("Registrar")
+
     }
 
     const marginTop = {

@@ -1,6 +1,6 @@
 // const baseUrl = 'https://e-shop-family.herokuapp.com/api/v1'
 
-const baseUrl = 'http://localhost:3001/DetectorHuecos'
+const baseUrl = 'http://localhost:3001/DetectorHuecos/v1'
 
 let userMain = null
 

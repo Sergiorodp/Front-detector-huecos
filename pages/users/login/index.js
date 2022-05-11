@@ -43,27 +43,33 @@ export default function Login() {
     }
 
     const handleLogin = e => {
+
         e.preventDefault()
+
         setMessage('Loading...')
+
         UserService.LoginService({
             email : email,
             password : password
         })
-        .then( res => res.JSON())
-        .then( res => {
+        .then( () => {
+
             console.log(`{
                 "email" : ${email},
                 "password" : ${password}
             }`);
             setPassword('')
             setEmail('') 
-            console.log( res )
             router.push('/')
+
         })
         .catch( e => {
             setMessage('Ingresa')
             console.log("usuario o contraseña incorrectos")
+            console.log(e)
+
         })
+
     }
 
     return(
