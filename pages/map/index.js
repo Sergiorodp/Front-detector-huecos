@@ -1,4 +1,5 @@
 import DashLayout from 'Layout/AppLayout/appLayout'
+import WebMap from 'components/map/map'
 
 //styles
 import styles from './dashstyle.module.css'
@@ -10,9 +11,9 @@ export default function Dash(){
         <DashLayout>
 
             <div className = {styles.dashBoard}>
-                <div className = {styles.categorieCard}>
-                    
-                </div>
+                
+                    <WebMap/>
+             
             </div>
             
         </DashLayout>

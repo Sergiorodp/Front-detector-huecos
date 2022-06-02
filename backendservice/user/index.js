@@ -4,8 +4,9 @@ import helpers from 'backendservice/helpers'
 
 const baseUrlService = `${helpers.baseUrl}/users`
 
-
-// servicios
+const config = (token) => {
+    return {headers: { Authorization: `Bearer ${token}` }}
+};
 
 const getUser = () => {
     return axios.get(baseUrlService)
@@ -15,25 +16,27 @@ const getUser = () => {
 const LoginService = user => {
 
     return axios.post(`${baseUrlService}/login`, user)
-    .then(res => {
-        const data = res.data
-        helpers.setUser_const(data)
-        console.log(data)
-    })
 
 }
 
 const RegisterService = user =>{
 
     return axios.post(`${baseUrlService}/register`, user)
-    .then(res => {
-        const data = res.data
-        helpers.setUser_const(data)
-        console.log(data)
-    })
 
 }
 
+export const GetByTkn = token => {
+
+    return axios.get(`${baseUrlService}/get/bytkn?token=${token}`)
+    
+}
+
+export const isValidTkn = token => {
+    return axios.get(`${baseUrlService}/isValidToken`,
+    config(token) 
+    )
+}
+ 
 
 // logIn({
 //     email : "sergi@jojojo.com",
@@ -43,5 +46,7 @@ const RegisterService = user =>{
 export default { 
     LoginService,
     getUser,
-    RegisterService
+    RegisterService,
+    GetByTkn,
+    isValidTkn
 }

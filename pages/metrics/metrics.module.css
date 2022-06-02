@@ -1,0 +1,25 @@
+.dashBoard{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* background: white; */
+}
+
+.content{
+    /* background: red; */
+    display: flex;
+}
+
+.linecontainer{
+    width: 90%;
+    margin: auto;
+    /* padding: 5%; */
+}
+
+.content p{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+

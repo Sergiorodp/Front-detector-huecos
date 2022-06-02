@@ -11,11 +11,14 @@ export default function DashBoardNav(){
             link : "/"
         },
         {
-            name : "Products",
-            link : "/dashboard/"
+            name : "Map",
+            link : "/map/"
         },{
-            name : "Añadir",
-            link : "/dashboard/addProduct" 
+            name : "Metricas",
+            link: "/metrics"
+        },{
+            name : "Tus detecciones",
+            link : "/detecciones" 
         }]
 
     const placeMenu = menu.map( cont =>{
@@ -43,7 +46,7 @@ export default function DashBoardNav(){
                 </ul>
             </div>
             <div className={styles.footerDashNav}>
-                <p>footer</p>
+                <p>Copyright MaoElectronics</p>
             </div>
         </nav>
     )

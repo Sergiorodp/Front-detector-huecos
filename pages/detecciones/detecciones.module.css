@@ -1,0 +1,15 @@
+.dashBoard{
+    width: 100%;
+    height: 100%;
+    background: #f6f6fb;
+    padding:2%;
+}
+
+.categorieCard{
+    height: 10vh;
+}
+
+.detections{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}

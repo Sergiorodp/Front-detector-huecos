@@ -1,16 +1,8 @@
-// const baseUrl = 'https://e-shop-family.herokuapp.com/api/v1'
+// const baseUrl = 'https://detector-huecos.herokuapp.com/DetectorHuecos/v1'
+// const basePORT = 'https://detector-huecos.herokuapp.com'
 
 const baseUrl = 'http://localhost:3001/DetectorHuecos/v1'
+// const basePORT = 'http://127.0.0.1/'
+const basePORT = 'http://localhost:3001'
 
-let userMain = null
-
-/* set and get */
-const setUser_const = user => {
-    userMain = user
-}
-
-const getUser_const = () => {
-    return userMain
-}
-
-export default { baseUrl, setUser_const, getUser_const }
+export default { baseUrl, basePORT }

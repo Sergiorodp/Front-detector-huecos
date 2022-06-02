@@ -15,20 +15,23 @@ import UserService from 'backendservice/user'
 
 //styles
 import styles from './Login.module.css'
+import { useDispatch } from 'react-redux'
+import user from 'backendservice/user'
 
+//reducer funtions
+import { setUser } from 'reducers/usersReducer'
 
 export default function Login() {
 
     const router = useRouter()
+    const dispatch = useDispatch()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
 
     useEffect( () => {
-        const user = helpers.getUser_const()
         setMessage('Ingresa')
-        user !== null && router.replace('/')
     },[])
 
 
@@ -52,14 +55,16 @@ export default function Login() {
             email : email,
             password : password
         })
-        .then( () => {
+        .then( user => {
 
-            console.log(`{
-                "email" : ${email},
-                "password" : ${password}
-            }`);
+            const info = user.data.result
+            console.log(user);
             setPassword('')
             setEmail('') 
+            dispatch(setUser(info))
+
+            const toknString = JSON.stringify({ tkn : info.token })
+            window.localStorage.setItem('tkn', toknString)  
             router.push('/')
 
         })

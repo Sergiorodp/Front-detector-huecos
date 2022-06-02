@@ -1,10 +1,11 @@
 
 .mainContainer{
-    width: 100%;
+    max-width: 100vw;
     height: 100vh;
     background: #f6f6fb;
     display: grid;
     grid-template-columns: repeat(6,1fr);
+    overflow: hidden;
 }
 
 .navContainer{
@@ -16,28 +17,30 @@
 
 }
 
-.childrenContainer{
+.infoContainer{
     grid-column: 2/7;
     display: grid;
-    grid-template-rows: 2fr 6fr 1fr;
+    grid-template-rows: 15vh 80vh 5vh;
 }
 
-.userbar{
+.upperBarConatiner{
+    grid-row: 1/2;
+    width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    /* background: rebeccapurple; */
 }
 
-.bar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-column: 1/3;
+.childrenContainer{
+    width: 100%;
+    grid-row: 2/4;
 }
 
-.userMenu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@media screen and (max-width: 800px) {
+    .navContainer{
+        display: none;
+    }
+    .infoContainer{
+        grid-column: 1/7;
+        display: grid;
+        grid-template-rows: 15vh 80vh 5vh;
+    }
+  }
